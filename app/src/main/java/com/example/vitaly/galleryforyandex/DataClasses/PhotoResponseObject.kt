@@ -1,5 +1,7 @@
-package com.example.vitaly.galleryforyandex
+package com.example.vitaly.galleryforyandex.DataClasses
 
+import com.example.vitaly.galleryforyandex.DataClasses.Entry
+import com.example.vitaly.galleryforyandex.DataClasses.LinksObject
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 

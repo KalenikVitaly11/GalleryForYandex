@@ -20,7 +20,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
-                android:text="Яндекс.Фотки Фото дня"
+                android:text="Фото дня"
                 android:textColor="@color/my_text_color_242424"
                 android:textSize="22sp"
                 android:layout_margin="16dp"/>

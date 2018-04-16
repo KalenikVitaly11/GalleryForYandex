@@ -1,4 +1,4 @@
-package com.example.vitaly.galleryforyandex
+package com.example.vitaly.galleryforyandex.DataClasses
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
