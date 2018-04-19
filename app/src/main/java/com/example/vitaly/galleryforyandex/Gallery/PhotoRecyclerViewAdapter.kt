@@ -51,10 +51,10 @@ class PhotoRecyclerViewAdapter(val data: ArrayList<Entry>, val context: Context)
                 intent.putExtra("image", dataPhotos.get(position).photo!!.l!!.source)
                 intent.putExtra("author", dataPhotos.get(position).author)
                 intent.putExtra("name", dataPhotos.get(position).title)
+                intent.putExtra("link", dataPhotos.get(position).links!!.alternate)
                 context.startActivity(intent)
             }
-        });
-//holder?.itemPhoto.
+        })
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {

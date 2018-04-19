@@ -8,12 +8,12 @@ import android.support.v7.widget.RecyclerView
 import android.widget.Toast
 import com.example.vitaly.galleryforyandex.DataClasses.Entry
 import com.example.vitaly.galleryforyandex.GridSpacingItemDecoration
-import com.example.vitaly.galleryforyandex.Model.PhotoRepository
-import com.example.vitaly.galleryforyandex.Model.PhotoRepositoryImpl
+import com.example.vitaly.galleryforyandex.Data.PhotoRepository
+import com.example.vitaly.galleryforyandex.Data.PhotoRepositoryImpl
 import com.example.vitaly.galleryforyandex.R
 import io.realm.Realm
 
-class PhotoActivity : AppCompatActivity(), GalleryView {
+class GalleryActivity : AppCompatActivity(), GalleryView {
     private lateinit var swipeRefreshLayout: SwipeRefreshLayout
     private lateinit var recyclerView: RecyclerView
     private lateinit var photoRecyclerViewAdapter: PhotoRecyclerViewAdapter
@@ -45,6 +45,7 @@ class PhotoActivity : AppCompatActivity(), GalleryView {
         recyclerView.addItemDecoration(GridSpacingItemDecoration(2, 3))
         photoRecyclerViewAdapter = PhotoRecyclerViewAdapter(dataPhotos, this)
         recyclerView.adapter = photoRecyclerViewAdapter
+
     }
 
     override fun photoRequestError() {

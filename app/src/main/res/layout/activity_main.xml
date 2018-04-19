@@ -5,7 +5,7 @@
     android:id="@+id/photos_swipe_refresh"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.vitaly.galleryforyandex.Gallery.PhotoActivity">
+    tools:context="com.example.vitaly.galleryforyandex.Gallery.GalleryActivity">
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"

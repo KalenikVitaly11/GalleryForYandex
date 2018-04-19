@@ -1,4 +1,4 @@
-package com.example.vitaly.galleryforyandex.Model
+package com.example.vitaly.galleryforyandex.Data
 
 import com.example.vitaly.galleryforyandex.DataClasses.Entry
 import com.example.vitaly.galleryforyandex.DataClasses.PhotoResponseObject

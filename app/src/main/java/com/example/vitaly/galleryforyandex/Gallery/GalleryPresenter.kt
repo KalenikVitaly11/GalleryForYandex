@@ -1,7 +1,7 @@
 package com.example.vitaly.galleryforyandex.Gallery
 
 import android.util.Log
-import com.example.vitaly.galleryforyandex.Model.PhotoRepository
+import com.example.vitaly.galleryforyandex.Data.PhotoRepository
 import io.reactivex.Observable
 
 
