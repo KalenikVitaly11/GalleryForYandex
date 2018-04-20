@@ -15,3 +15,5 @@ open class ImgObject(@SerializedName("XXS") @Expose var xxs: BasicImage? = null,
                      @SerializedName("XS") @Expose var xs: BasicImage? = null,
                      @SerializedName("XXL") @Expose var xxl: BasicImage? = null,
                      @SerializedName("orig") @Expose var original: BasicImage? = null) : RealmObject()
+// Класс, содержащий сами картинки разных размеров
+// Каждому полю пришлось дать дефолтное значение, по-другому realm отказывался работать

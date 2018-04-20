@@ -11,7 +11,7 @@ import retrofit2.Response
 
 class PhotoRepositoryImpl: PhotoRepository {
     val realm = Realm.getDefaultInstance()
-    override fun getPhotosOfTheDay(): Observable<Response<PhotoResponseObject>> {
+    override fun getPhotosOfTheDay(): Observable<Response<PhotoResponseObject>> { // Запрос на получение фотографий
         return PhotoApi.create().getPhotosOfTheDay()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

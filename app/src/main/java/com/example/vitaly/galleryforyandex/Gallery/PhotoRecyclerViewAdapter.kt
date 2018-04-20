@@ -51,7 +51,7 @@ class PhotoRecyclerViewAdapter(val data: ArrayList<Entry>, val context: Context)
                 intent.putExtra("image", dataPhotos.get(position).photo!!.l!!.source)
                 intent.putExtra("author", dataPhotos.get(position).author)
                 intent.putExtra("name", dataPhotos.get(position).title)
-                intent.putExtra("link", dataPhotos.get(position).links!!.alternate)
+                intent.putExtra("link", dataPhotos.get(position).linksPhoto!!.alternate)
                 context.startActivity(intent)
             }
         })

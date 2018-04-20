@@ -45,7 +45,6 @@ class GalleryActivity : AppCompatActivity(), GalleryView {
         recyclerView.addItemDecoration(GridSpacingItemDecoration(2, 3))
         photoRecyclerViewAdapter = PhotoRecyclerViewAdapter(dataPhotos, this)
         recyclerView.adapter = photoRecyclerViewAdapter
-
     }
 
     override fun photoRequestError() {
