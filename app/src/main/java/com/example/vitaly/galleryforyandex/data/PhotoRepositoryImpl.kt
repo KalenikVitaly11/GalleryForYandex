@@ -1,7 +1,7 @@
-package com.example.vitaly.galleryforyandex.Data
+package com.example.vitaly.galleryforyandex.data
 
-import com.example.vitaly.galleryforyandex.DataClasses.Entry
-import com.example.vitaly.galleryforyandex.DataClasses.PhotoResponseObject
+import com.example.vitaly.galleryforyandex.dataClasses.Entry
+import com.example.vitaly.galleryforyandex.dataClasses.PhotoResponseObject
 import io.reactivex.Observable
 import kotlin.collections.ArrayList
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -22,11 +22,13 @@ class PhotoRepositoryImpl: PhotoRepository {
             transactionRealm.delete(Entry::class.java)
             transactionRealm.insert(entryList)
         }
+        closeDataBase()
     }
 
     override fun getFromDataBase(): ArrayList<Entry> { // Чтение из базы данных
         val realm = Realm.getDefaultInstance()
         val results = realm.where(Entry::class.java).findAll()
+        closeDataBase()
         return ArrayList(results)
     }
 

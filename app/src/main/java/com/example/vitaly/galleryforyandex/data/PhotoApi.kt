@@ -1,6 +1,6 @@
-package com.example.vitaly.galleryforyandex.Data
+package com.example.vitaly.galleryforyandex.data
 
-import com.example.vitaly.galleryforyandex.DataClasses.PhotoResponseObject
+import com.example.vitaly.galleryforyandex.dataClasses.PhotoResponseObject
 import io.reactivex.Observable
 import retrofit2.Response
 import retrofit2.Retrofit

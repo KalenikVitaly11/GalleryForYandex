@@ -1,7 +1,7 @@
-package com.example.vitaly.galleryforyandex.Data
+package com.example.vitaly.galleryforyandex.data
 
-import com.example.vitaly.galleryforyandex.DataClasses.Entry
-import com.example.vitaly.galleryforyandex.DataClasses.PhotoResponseObject
+import com.example.vitaly.galleryforyandex.dataClasses.Entry
+import com.example.vitaly.galleryforyandex.dataClasses.PhotoResponseObject
 import retrofit2.Response
 import io.reactivex.Observable
 import kotlin.collections.ArrayList

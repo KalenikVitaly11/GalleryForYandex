@@ -1,6 +1,6 @@
-package com.example.vitaly.galleryforyandex.Gallery
+package com.example.vitaly.galleryforyandex.gallery
 
-import com.example.vitaly.galleryforyandex.DataClasses.Entry
+import com.example.vitaly.galleryforyandex.dataClasses.Entry
 
 
 interface GalleryView {
