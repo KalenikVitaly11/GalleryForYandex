@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Галерея для Яндекс.Мобилизации</string>
-    <string name="photo_of_the_day">Фото дня от сервиса Яндекс.Фотки</string>
+    <string name="photos_of_the_day">Фото дня от сервиса Яндекс.Фотки</string>
     <string name="photo_name">Название:</string>
     <string name="photo_author">Автор:</string>
     <string name="photo_source">Источник:</string>
     <string name="error">Ошибка</string>
+    <string name="back">Назад</string>
+    <string name="photo_of_the_day">Фото дня от сервиса Яндекс.Фотки</string>
 </resources>

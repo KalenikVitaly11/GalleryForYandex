@@ -18,11 +18,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="16dp"
                 android:fontFamily="sans-serif"
-                android:text="@string/photo_of_the_day"
+                android:text="@string/photos_of_the_day"
                 android:textColor="@color/my_text_color_242424"
-                android:textSize="20sp"
-                android:layout_margin="16dp"/>
+                android:textSize="20sp" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/photos_recycler_view"

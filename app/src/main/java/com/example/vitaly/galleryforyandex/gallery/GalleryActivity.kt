@@ -5,15 +5,12 @@ import android.os.Bundle
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.widget.Toast
 import com.example.vitaly.galleryforyandex.dataClasses.Entry
 import com.example.vitaly.galleryforyandex.GridSpacingItemDecoration
 import com.example.vitaly.galleryforyandex.data.PhotoRepository
 import com.example.vitaly.galleryforyandex.data.PhotoRepositoryImpl
 import com.example.vitaly.galleryforyandex.R
-import io.realm.Realm
-import io.realm.internal.network.NetworkStateReceiver
 
 class GalleryActivity : AppCompatActivity(), GalleryView {
     private lateinit var swipeRefreshLayout: SwipeRefreshLayout
@@ -30,6 +27,7 @@ class GalleryActivity : AppCompatActivity(), GalleryView {
         model = PhotoRepositoryImpl()
         presenter = GalleryPresenter(this, model)
         presenter.initRecyclerView()
+
 
 
         swipeRefreshLayout = findViewById(R.id.photos_swipe_refresh)
@@ -49,7 +47,6 @@ class GalleryActivity : AppCompatActivity(), GalleryView {
             swipeRefreshLayout.isRefreshing = true
             presenter.getPhotosOfTheDay()
         }
-
     }
 
     override fun initRecyclerView() {
@@ -61,7 +58,7 @@ class GalleryActivity : AppCompatActivity(), GalleryView {
     }
 
     override fun photoRequestError() {
-        Toast.makeText(this, resources.getText(R.string.error).toString(), Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, resources.getString(R.string.error), Toast.LENGTH_SHORT).show()
         swipeRefreshLayout.isRefreshing = false
     }
 

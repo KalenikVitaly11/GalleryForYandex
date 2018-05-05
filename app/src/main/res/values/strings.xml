@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">Gallery for Yandex.Mobilization</string>
-    <string name="photo_of_the_day">Photos of the day from Yandex.Fotki</string>
+    <string name="photos_of_the_day">Photos of the day from Yandex.Fotki</string>
     <string name="photo_name">Name:</string>
     <string name="photo_author">Author:</string>
     <string name="photo_source">Source:</string>
     <string name="error">Error</string>
+    <string name="back">Back</string>
+    <string name="photo_of_the_day">Photo of the day from Yandex.Fotki</string>
 </resources>

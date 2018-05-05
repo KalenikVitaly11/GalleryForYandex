@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fullscreen_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black"
     android:animateLayoutChanges="true"
-    tools:context=".fullscreenImagePreview.FullScreenImageActivity">
+    android:background="@android:color/black"
+    tools:context=".fullscreenImagePreview.FullScreenImageActivity"
+    tools:ignore="Overdraw">
 
 
     <com.github.chrisbanes.photoview.PhotoView
@@ -21,61 +23,88 @@
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
-        android:src="@mipmap/ic_arrow_back_white_24dp" />
+        android:contentDescription="@string/back"
+        android:src="@mipmap/ic_arrow_back_white_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
         android:id="@+id/fullscreen_progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/fullscreen_image_name_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/fullscreen_image_link_title"
+        android:layout_alignStart="@id/fullscreen_image_link_title"
         android:layout_alignTop="@+id/fullscreen_image_name"
-        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif"
         android:text="@string/photo_name"
         android:textColor="@android:color/background_light"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/fullscreen_author_title"
+        app:layout_constraintStart_toStartOf="@+id/fullscreen_image_link_title" />
 
     <TextView
         android:id="@+id/fullscreen_image_name"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_above="@id/fullscreen_author_title"
-        android:layout_toRightOf="@id/fullscreen_image_name_title"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/fullscreen_image_name_title"
+        android:ellipsize="end"
         android:fontFamily="sans-serif"
+        android:maxLines="1"
         android:text="@string/photo_name"
         android:textColor="@android:color/background_light"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fullscreen_image_name_title"
+        app:layout_constraintStart_toEndOf="@+id/fullscreen_image_name_title" />
 
     <TextView
         android:id="@+id/fullscreen_author_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/fullscreen_image_link_title"
-        android:layout_alignLeft="@+id/fullscreen_image_link_title"
-        android:layout_marginEnd="4dp"
+        android:layout_alignStart="@+id/fullscreen_image_link_title"
+        android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif"
         android:text="@string/photo_author"
         android:textColor="@android:color/background_light"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/fullscreen_image_link_title"
+        app:layout_constraintStart_toStartOf="@+id/fullscreen_image_link_title" />
 
     <TextView
         android:id="@+id/fullscreen_author"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignTop="@id/fullscreen_author_title"
-        android:layout_toRightOf="@id/fullscreen_author_title"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/fullscreen_author_title"
+        android:ellipsize="end"
         android:fontFamily="sans-serif"
+        android:maxLines="1"
         android:text="@string/photo_author"
         android:textColor="@android:color/background_light"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fullscreen_author_title"
+        app:layout_constraintStart_toEndOf="@+id/fullscreen_author_title" />
 
 
     <TextView
@@ -83,26 +112,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:fontFamily="sans-serif"
         android:text="@string/photo_source"
         android:textColor="@android:color/background_light"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fullscreen_image_link"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/fullscreen_image_link"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:maxWidth="300dp"
         android:layout_alignTop="@+id/fullscreen_image_link_title"
-        android:layout_toRightOf="@id/fullscreen_image_link_title"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/fullscreen_image_link_title"
         android:autoLink="web"
+        android:ellipsize="end"
         android:fontFamily="sans-serif"
+        android:maxEms="50"
+        android:maxLines="1"
         android:text="@string/photo_source"
         android:textColor="@android:color/background_light"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fullscreen_image"
+        app:layout_constraintStart_toEndOf="@+id/fullscreen_image_link_title" />
 
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

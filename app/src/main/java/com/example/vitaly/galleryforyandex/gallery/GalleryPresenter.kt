@@ -1,15 +1,11 @@
 package com.example.vitaly.galleryforyandex.gallery
 
-import android.util.Log
 import com.example.vitaly.galleryforyandex.data.PhotoRepository
 import com.example.vitaly.galleryforyandex.dataClasses.Entry
-import com.squareup.picasso.Picasso
 import io.reactivex.Observable
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 
 
-class GalleryPresenter(val view: GalleryView, val model: PhotoRepository) {
+class GalleryPresenter(val view: GalleryView, private val model: PhotoRepository) {
     fun initRecyclerView(){
         view.initRecyclerView()
     }
